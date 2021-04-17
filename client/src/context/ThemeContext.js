@@ -22,10 +22,14 @@ class ThemeContextProvider extends Component {
         };
     }
 
+    toggleTheme = () => {
+        this.setState({isLightTheme: !this.state.isLightTheme})
+    }
+
     render() {
         return (
             // wraps the components so you can access the data
-            <ThemeContext.Provider value={{...this.state}}>
+            <ThemeContext.Provider value={{...this.state, toggleTheme: this.toggleTheme}}>
                 {/* access the components, places the component here */}
                 {this.props.children}
             </ThemeContext.Provider>

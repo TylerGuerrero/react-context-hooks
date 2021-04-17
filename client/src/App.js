@@ -1,15 +1,20 @@
 import React from 'react'; 
 import Navbar from './components/Navbar';
 import BookList from './components/BookList';
-import ThemeContext from './context/ThemeContext';
+import ThemeToggle from './components/ThemeToggle';
+import ThemeContextProvider from './context/ThemeContext';
+import AuthContextProvider from './context/AuthContext';
 
 function App() {
   return (
     <div className="App">
-      <ThemeContext>
-        <Navbar/>
-        <BookList/>
-      </ThemeContext>
+        <ThemeContextProvider>
+          <AuthContextProvider>
+            <Navbar/>
+            <BookList/>
+            <ThemeToggle/>
+          </AuthContextProvider>
+        </ThemeContextProvider>
     </div>
   );
 }
