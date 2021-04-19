@@ -1,4 +1,4 @@
-import React, {Component, createContext} from 'react'
+import React, { Component, createContext } from 'react'
 
 // A Context tree
 export const AuthContext = createContext();

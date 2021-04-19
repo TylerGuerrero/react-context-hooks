@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const NewSong = ({ addSong }) => {
     const [title, setTitle] = useState("");

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import uuid from 'uuid/v1';
-import NewSong from './NewSong'
+import NewSong from './NewSong';
 
 const SongList = () => {
 
